@@ -1,0 +1,35 @@
+make -C /usr/src/linux-headers-4.19.0-13-amd64 SUBDIRS=/root/Exercise_6 modules
+make[1]: Entering directory '/usr/src/linux-headers-4.19.0-13-amd64'
+  CC [M]  /root/Exercise_6/Read40.o
+/root/Exercise_6/Read40.c: In function ‘open_file_for_read’:
+/root/Exercise_6/Read40.c:53:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  int err = 0;
+  ^~~
+/root/Exercise_6/Read40.c: In function ‘read_from_file_until’:
+/root/Exercise_6/Read40.c:83:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  int i;
+  ^~~
+/root/Exercise_6/Read40.c: In function ‘hello_init’:
+/root/Exercise_6/Read40.c:115:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  struct myfile* sysmap = open_file_for_read("/boot/System.map-4.19.0-13-amd64");
+  ^~~~~~
+/root/Exercise_6/Read40.c:119:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  char *word;
+  ^~~~
+/root/Exercise_6/Read40.c:132:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  char *sys_call_addr;
+  ^~~~
+/root/Exercise_6/Read40.c:138:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  sys_call_ptr_t *sys_call_arr = (sys_call_ptr_t *) sys_call_addr;
+  ^~~~~~~~~~~~~~
+/root/Exercise_6/Read40.c:141:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  unsigned long laddr;
+  ^~~~~~~~
+/root/Exercise_6/Read40.c:148:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  unsigned long mycr = read_cr0();
+  ^~~~~~~~
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /root/Exercise_6/Read40.mod.o
+  LD [M]  /root/Exercise_6/Read40.ko
+make[1]: Leaving directory '/usr/src/linux-headers-4.19.0-13-amd64'
